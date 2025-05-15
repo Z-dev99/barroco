@@ -5,7 +5,6 @@ import logo from "../../assets/icons/logo-title.svg";
 import { useEffect } from "react";
 
 const Header: React.FC = () => {
-  // Прелоад видео вручную (в кэш браузера)
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "preload";
@@ -23,7 +22,7 @@ const Header: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <motion.video
-        key={video} // ключ помогает избежать перезагрузки
+        key={video}
         src={video}
         autoPlay
         muted
@@ -49,7 +48,7 @@ const Header: React.FC = () => {
         }}
       >
         <motion.img
-          src={logo + "?v=1"} 
+          src={logo + "?v=1"}
           alt="logo"
           className={styles.logo}
           initial={{ opacity: 0, y: 20 }}
@@ -63,8 +62,10 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Добрый день! Добро пожаловать в Barroco! <br /> Что бы вы хотели
-          попробовать сегодня?
+          Barroco - это произведения высокого кондитерского искусства.
+          <br />
+          Люкс-бутик десертов ручной работы. <br />
+          Сладкие без сахара.
         </motion.p>
 
         <motion.button
