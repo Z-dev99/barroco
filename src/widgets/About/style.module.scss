@@ -1,0 +1,58 @@
+$font-ricordi-regular: "TT Ricordi Greto Trial";
+$font-ricordi-variable: "TT Ricordi Greto Trial Variable";
+$font-nt-somic: "NT Somic VF";
+
+.about {
+    background: #420013;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+
+    & img {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        opacity: .1;
+        filter: saturate(0);
+    }
+
+    .content {
+        max-width: 900px;
+        text-align: center;
+        color: #fff;
+        font-family: $font-nt-somic;
+        line-height: 1.6;
+        z-index: 1;
+        position: relative;
+
+        p {
+            font-size: 20px;
+            margin-bottom: 24px;
+            font-family: $font-ricordi-variable;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .heading {
+            font-family: $font-ricordi-regular;
+            font-size: 42px;
+            margin-bottom: 40px;
+            color: #FF5629;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 12px auto 0;
+                width: 60px;
+                height: 3px;
+                background-color: #d8b4a0;
+            }
+        }
+    }
+}

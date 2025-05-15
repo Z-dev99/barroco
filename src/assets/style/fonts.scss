@@ -1,0 +1,30 @@
+$font-ricordi-regular: "TT Ricordi Greto Trial";
+$font-ricordi-variable: "TT Ricordi Greto Trial Variable";
+$font-nt-somic: "NT Somic VF";
+$fonts-path: "../fonts";
+
+@font-face {
+  font-family: #{$font-ricordi-regular};
+  src: url("#{$fonts-path}/TT Ricordi Greto Trial Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: #{$font-ricordi-variable};
+  src: url("#{$fonts-path}/TT Ricordi Greto Trial Variable.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: #{$font-nt-somic};
+  src: url("#{$fonts-path}/NT Somic-VF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

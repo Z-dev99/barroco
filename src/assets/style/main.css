@@ -1,0 +1,13 @@
+@import "./reset.css";
+@import "./fonts.scss";
+
+.container {
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  background: #4b001a;
+}
