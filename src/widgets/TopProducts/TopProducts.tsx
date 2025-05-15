@@ -1,10 +1,18 @@
 import styles from "./style.module.scss";
-import img from "../../assets/images/products/5.jpg";
-import img1 from "../../assets/images/products/6.jpg";
-import img2 from "../../assets/images/products/7.jpg";
-import img3 from "../../assets/images/products/8.jpg";
-import img4 from "../../assets/images/products/9.jpg";
-import img5 from "../../assets/images/products/10.jpg";
+import img from "../../assets/images/new/photo_2025-05-15_18-08-36.jpg";
+import img1 from "../../assets/images/new/photo_2025-05-15_18-08-40 (2).jpg";
+import img2 from "../../assets/images/new/photo_2025-05-15_18-08-40.jpg";
+import img3 from "../../assets/images/new/photo_2025-05-15_18-08-40 (2).jpg";
+import img4 from "../../assets/images/new/photo_2025-05-15_18-08-41.jpg"
+import img5 from "../../assets/images/new/photo_2025-05-15_18-08-42 (2).jpg";
+// 
+
+import image from '../../assets/images/light/1.jpg';
+import image1 from '../../assets/images/light/2.jpg';
+import image2 from '../../assets/images/light/3.jpg';
+import image3 from '../../assets/images/light/4.jpg';
+import image4 from '../../assets/images/light/5.jpg';
+
 import { motion } from "framer-motion";
 
 const products = [
@@ -56,6 +64,47 @@ const products = [
     price: "28 000 сум",
     image: img5,
   },
+  {
+    id: 7,
+    title: "Печенька",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
+    price: "28 000 сум",
+    image: image,
+  },
+  {
+    id: 8,
+    title: "Печенька",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
+    price: "28 000 сум",
+    image: image1,
+  },
+  {
+    id: 9,
+    title: "Печенька",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
+    price: "28 000 сум",
+    image: image2,
+  },
+  {
+    id: 10,
+    title: "Печенька",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
+    price: "28 000 сум",
+    image: image3,
+  },
+  {
+    id: 11,
+    title: "Печенька",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
+    price: "28 000 сум",
+    image: image4,
+  },
+  
 ];
 
 const containerVariants = {
@@ -110,7 +159,7 @@ const TopProducts: React.FC = () => {
               <div className={styles.itemImg}>
                 <img src={product.image} alt="product" loading="lazy" />
               </div>
-              <h3>{product.title}</h3>
+              {/* <h3>{product.title}</h3> */}
               {/* <p>{product.description}</p>
                             <span>{product.price}</span> */}
             </motion.div>
