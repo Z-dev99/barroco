@@ -1,15 +1,14 @@
 import About from "../About/About";
 import NewProducts from "../NewProducts/NewProducts";
+import Options from "../Options/Options";
 import TopProducts from "../TopProducts/TopProducts";
-import Video from "../Video/Video";
-
 const Main: React.FC = () => {
   return (
     <main>
       <NewProducts />
       <About />
       <TopProducts />
-      <Video />
+      <Options />
     </main>
   );
 };

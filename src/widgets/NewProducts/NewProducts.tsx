@@ -84,8 +84,8 @@ const NewProducts: React.FC = () => {
                 <img src={product.image} alt="product" loading="lazy" />
               </div>
               <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <span>{product.price}</span>
+              {/* <p>{product.description}</p>
+              <span>{product.price}</span> */}
             </motion.div>
           ))}
         </div>
