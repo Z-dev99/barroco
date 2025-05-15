@@ -32,14 +32,7 @@ const products = [
     price: "28 000 сум",
     image: img1,
   },
-  {
-    id: 3,
-    title: "Печенька",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
-    price: "28 000 сум",
-    image: img2,
-  },
+
   {
     id: 4,
     title: "Печенька",
@@ -56,14 +49,7 @@ const products = [
     price: "28 000 сум",
     image: img4,
   },
-  {
-    id: 6,
-    title: "Печенька",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eum?",
-    price: "28 000 сум",
-    image: img5,
-  },
+
   {
     id: 7,
     title: "Печенька",
