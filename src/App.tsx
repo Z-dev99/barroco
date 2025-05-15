@@ -6,16 +6,27 @@ import Header from "./widgets/Header/Header";
 import Main from "./widgets/Main/Main";
 import Footer from "./widgets/Footer/Footer";
 
-
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    const waitForFonts = async () => {
+      try {
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
+        }
+      } catch (error) {
+        console.warn("Ошибка при ожидании загрузки шрифтов:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    waitForFonts();
   }, []);
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {loading ? (
         <motion.div
           key="loader"
@@ -28,7 +39,7 @@ const App: React.FC = () => {
         </motion.div>
       ) : (
         <motion.div
-          key="navbar"
+          key="app"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}

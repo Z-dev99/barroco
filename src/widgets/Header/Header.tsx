@@ -2,8 +2,19 @@ import { motion } from "framer-motion";
 import styles from "./style.module.scss";
 import video from "../../assets/video/bg.mp4";
 import logo from "../../assets/icons/logo-title.svg";
+import { useEffect } from "react";
 
 const Header: React.FC = () => {
+  // Прелоад видео вручную (в кэш браузера)
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "video";
+    link.href = video;
+    link.type = "video/mp4";
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <motion.header
       className={styles.header}
@@ -12,10 +23,12 @@ const Header: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <motion.video
+        key={video} // ключ помогает избежать перезагрузки
         src={video}
         autoPlay
         muted
         loop
+        preload="auto"
         className={styles.video}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -36,7 +49,7 @@ const Header: React.FC = () => {
         }}
       >
         <motion.img
-          src={logo}
+          src={logo + "?v=1"} 
           alt="logo"
           className={styles.logo}
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +63,7 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Добрый день! Добро пожаловать в Barroco! <br />Что бы вы хотели
+          Добрый день! Добро пожаловать в Barroco! <br /> Что бы вы хотели
           попробовать сегодня?
         </motion.p>
 
@@ -60,7 +73,9 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           onClick={() => {
-            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           Подробнее
